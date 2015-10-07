@@ -1,0 +1,15 @@
+<ion-view view-title="Login To MyHandyMan" name="login-view">
+  <ion-content class="padding" overflow-scroll="true">
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Username" ng-model="data.username">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password">
+          </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="login()">Login</button>
+      <button class="button button-block button-calm" ng-click="signup()">Sign Up</button>
+      {{error}}
+  </ion-content>
+</ion-view>

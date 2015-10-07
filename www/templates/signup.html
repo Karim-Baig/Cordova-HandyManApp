@@ -1,0 +1,39 @@
+<ion-view view-title="SignUp" name="SignUp-view">
+  <ion-content class="padding" overflow-scroll="true">
+      <div class="list list-inset">
+          <label class="item item-input">
+             <input type="text" placeholder="First Name" ng-model="signup.fname">
+          </label>
+           <label class="item item-input">
+             <input type="text" placeholder="Last Name" ng-model="signup.lname">
+          </label>
+           <label class="item item-input item-select">
+            <div ng-controller="GenderCtrl">
+              <span class="input-label">Select Gender</span>
+            <select  placeholder="Gender" ng-model="signup.gender"  ng-options="gender.value as gender.Name for gender in genders ">
+             </select>
+            </div>
+          </label>
+           <label class="item item-input">
+             <input type="text" placeholder="Contact Number" ng-model="signup.telnumber">
+          </label>
+           <label class="item item-input">
+             <input type="text" placeholder="Address" ng-model="signup.address">
+          </label>
+           <label class="item item-input">
+             <input type="text" placeholder="ID Number" ng-model="signup.idnumber">
+          </label>
+           <label class="item item-input">
+             <input type="text" placeholder="Email Address" ng-model="signup.email">
+          </label>
+           <label class="item item-input">
+             <input type="password" placeholder="Password" ng-model="signup.password">
+          </label>
+           <label class="item item-input">
+             <input type="password" placeholder="Re-Type Password" ng-model="signup.retypepassword">
+          </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="signup()">Create Account</button>
+      {{error}}
+  </ion-content>
+</ion-view>
